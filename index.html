@@ -6,6 +6,17 @@
     <meta name="theme-color" content="#f6f5ff" />
     <meta name="description" content="Krátké a hravé domácí procvičování pro děti." />
     <title>Hvězdné učení</title>
+    <script>
+      (function () {
+        var redirectPath = sessionStorage.getItem("hvezdne-uceni-spa-path");
+        if (!redirectPath) return;
+
+        sessionStorage.removeItem("hvezdne-uceni-spa-path");
+        if (redirectPath.charAt(0) === "/" && redirectPath.charAt(1) !== "/") {
+          history.replaceState(null, "", redirectPath);
+        }
+      })();
+    </script>
     <script type="module" crossorigin src="/assets/index-C0EIsv2c.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DDme2FfN.css">
   </head>

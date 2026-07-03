@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Načítám Hvězdné učení…</title>
+    <script>
+      (function () {
+        var path = location.pathname + location.search + location.hash;
+        sessionStorage.setItem("hvezdne-uceni-spa-path", path);
+        location.replace("/");
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Načítám Hvězdné učení…</p>
+  </body>
+</html>
